@@ -1,5 +1,6 @@
-/* Global Rules */
-
+/************************/
+/***** Global Rules *****/
+/************************/
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -14,21 +15,123 @@ body {
 	margin: 0 auto 0 auto;
 	padding: 0 10px 0 10px;
 }
-
+/* small screens */
 @media (min-width: 768px) {
 	.container {
 		width: 750px;
 	}
 }
-
+/* medium screens */
 @media (min-width: 992px) {
 	.container {
 		width: 970px;
 	}
 }
-
+/* large screens */
 @media (min-width: 1200px) {
 	.container {
 		width: 1170px;
 	}
+}
+
+/******************/
+/***** Header *****/
+/******************/
+
+.header {
+	padding: 15px;
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo {
+	width: 60px;
+}
+/* relative container to give children absolute pos */
+.header .nav {
+	position: relative;
+}
+/* styling burger icon */
+.header .nav .burger-icon {
+	width: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.header .nav .burger-icon span {
+	background-color: #333;
+	margin-bottom: 5px;
+	height: 2px;
+}
+
+.header .nav .burger-icon span:first-child {
+	width: 100%;
+}
+
+.header .nav .burger-icon span:nth-child(2) {
+	width: 60%;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+/* increasing the length of the burger second line on hover */
+.header .nav:hover .burger-icon span:nth-child(2) {
+	width: 100%;
+}
+
+.header .nav .burger-icon span:last-child {
+	width: 100%;
+}
+/* styling the links container and hiding it */
+.header .nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	min-width: 200px;
+	background-color: #f6f6f6;
+	display: none;
+}
+/* showing the links on hover */
+.header .nav:hover ul {
+	display: block;
+}
+/* adding the triangle over the links box */
+.header .nav ul::before {
+	content: "";
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #f6f6f6 transparent;
+	position: absolute;
+	top: -20px;
+	right: 5px;
+}
+/* links styling */
+.header .nav ul a {
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	color: #333;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+/* link moving effect on hovering */
+.header .nav ul a:hover {
+	padding-left: 20px;
+}
+/* adding separators between links */
+.header .nav ul li:not(:last-child) a {
+	border-bottom: 1px solid #ddd;
 }
