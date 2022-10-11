@@ -1,3 +1,10 @@
+/****************************/
+/***** Global Variables *****/
+/****************************/
+:root {
+	--theme-color: cyan;
+}
+
 /************************/
 /***** Global Rules *****/
 /************************/
@@ -100,6 +107,7 @@ body {
 	min-width: 200px;
 	background-color: #f6f6f6;
 	display: none;
+	z-index: 1;
 }
 /* showing the links on hover */
 .header .nav:hover ul {
@@ -134,4 +142,44 @@ body {
 /* adding separators between links */
 .header .nav ul li:not(:last-child) a {
 	border-bottom: 1px solid #ddd;
+}
+
+/*******************/
+/***** Landing *****/
+/*******************/
+
+.landing {
+	background-image: url("../images/landing.jpg");
+	background-size: cover;
+	height: calc(100vh - 54px);
+	position: relative;
+}
+
+/* centering landing content in whole screen using top/left positioning  */
+.landing .landing-text {
+	text-align: center;
+	width: 320px;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+/* landing heading */
+.landing .landing-text h1 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 60px;
+	color: var(--theme-color);
+}
+
+/* landing text */
+.landing .landing-text p {
+	font-size: 20px;
+	line-height: 2;
 }
