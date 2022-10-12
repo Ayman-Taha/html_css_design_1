@@ -3,6 +3,9 @@
 /****************************/
 :root {
 	--theme-color: cyan;
+	--p-fontsize: 18px;
+	--p-line-height: 1.5;
+	--background-color: #f6f6f6;
 }
 
 /************************/
@@ -105,7 +108,7 @@ body {
 	top: calc(100% + 10px);
 	right: 0;
 	min-width: 200px;
-	background-color: #f6f6f6;
+	background-color: var(--background-color);
 	display: none;
 	z-index: 1;
 }
@@ -118,7 +121,7 @@ body {
 	content: "";
 	border-width: 10px;
 	border-style: solid;
-	border-color: transparent transparent #f6f6f6 transparent;
+	border-color: transparent transparent var(--background-color) transparent;
 	position: absolute;
 	top: -20px;
 	right: 5px;
@@ -180,6 +183,46 @@ body {
 
 /* landing text */
 .landing .landing-text p {
-	font-size: 20px;
-	line-height: 2;
+	font-size: var(--p-fontsize);
+	line-height: var(--p-line-height);
+}
+
+/********************/
+/***** Features *****/
+/********************/
+
+.features {
+	padding: 60px 0;
+	background-color: var(--background-color);
+}
+
+/* features container grid */
+.features .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+/* feature */
+.features .feat {
+	padding: 20px;
+	text-align: center;
+}
+
+/* feature icon */
+.features .feat i {
+	color: var(--theme-color);
+}
+
+/* feature heading */
+.features .feat h3 {
+	font-weight: 800;
+	margin: 30px 0;
+}
+
+/* feature text */
+.features .feat p {
+	font-size: var(--p-fontsize);
+	line-height: var(--p-line-height);
+	color: #777;
 }
