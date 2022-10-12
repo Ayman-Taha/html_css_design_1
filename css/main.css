@@ -259,3 +259,11 @@ body {
 	line-height: var(--p-line-height);
 	color: #777;
 }
+
+/********************/
+/***** Services *****/
+/********************/
+
+.services {
+	padding: 60px 0;
+}
