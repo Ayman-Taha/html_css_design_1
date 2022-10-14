@@ -540,3 +540,19 @@ body {
 		font-size: 25px;
 	}
 }
+
+/******************/
+/***** footer *****/
+/******************/
+
+.footer {
+	background-color: var(--secondary-theme-color);
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.footer span {
+	color: var(--main-theme-color);
+}
