@@ -6,7 +6,10 @@
 	--secondary-theme-color: #2c4755;
 	--p-font-size: 18px;
 	--p-line-height: 1.5;
+	--p-font-color: #777;
+	--p-font-weight: 300;
 	--background-color: #f6f6f6;
+	--grid-gap: 20px;
 }
 
 /************************/
@@ -53,7 +56,7 @@ body {
 /* special heading */
 
 .special-heading {
-	color: #ebeced;
+	color: #ddd;
 	font-size: 100px;
 	font-weight: 800;
 	letter-spacing: -4px;
@@ -65,7 +68,7 @@ body {
 	margin-top: -30px;
 	font-size: var(--p-font-size);
 	text-align: center;
-	color: #797979;
+	color: #ccc;
 }
 
 /* control style on small screens */
@@ -227,7 +230,7 @@ body {
 /********************/
 
 .features {
-	padding: 60px 0;
+	padding: var(--section-padding);
 	background-color: var(--background-color);
 }
 
@@ -235,7 +238,7 @@ body {
 .features .container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 20px;
+	gap: var(--grid-gap);
 }
 
 /* feature */
@@ -259,7 +262,8 @@ body {
 .features .feat p {
 	font-size: var(--p-font-size);
 	line-height: var(--p-line-height);
-	color: #777;
+	color: var(--p-font-color);
+	font-weight: var(--p-font-weight);
 }
 
 /********************/
@@ -267,13 +271,13 @@ body {
 /********************/
 
 .services {
-	padding: 60px 0;
+	padding: var(--section-padding);
 }
 
 .services .services-content {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 20px;
+	gap: var(--grid-gap);
 	margin-top: 100px;
 }
 
@@ -309,8 +313,8 @@ body {
 .services .services-content .serv .serv-text p {
 	font-size: var(--p-font-size);
 	line-height: var(--p-line-height);
-	color: #777;
-	font-weight: 300;
+	color: var(--p-font-color);
+	font-weight: var(--p-font-weight);
 }
 
 /* service image div */
@@ -340,5 +344,56 @@ body {
 @media (max-width: 1199px) {
 	.services-content .services-col:last-child {
 		display: none;
+	}
+}
+
+/*********************/
+/***** Portfolio *****/
+/*********************/
+
+.portfolio {
+	padding: var(--section-padding);
+	background-color: var(--background-color);
+}
+
+.portfolio .portfolio-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: var(--grid-gap);
+	margin-top: 100px;
+}
+
+/* portfolio card/project */
+.portfolio .portfolio-content .card {
+	background-color: white;
+}
+
+/* portfolio card/project image */
+.portfolio .portfolio-content .card img {
+	max-width: 100%;
+}
+
+/* portfolio card/project text content */
+.portfolio .portfolio-content .card .project-info {
+	padding: 20px;
+}
+
+/* portfolio card/project heading*/
+.portfolio .portfolio-content .card .project-info h3 {
+	margin: 0;
+}
+
+/* portfolio card/project paragraph*/
+.portfolio .portfolio-content .card .project-info p {
+	font-size: var(--p-font-size);
+	line-height: var(--p-line-height);
+	color: var(--p-font-color);
+	font-weight: var(--p-font-weight);
+}
+
+/* centering text for small screens */
+@media (max-width: 767px) {
+	.portfolio .portfolio-content .card {
+		text-align: center;
 	}
 }
