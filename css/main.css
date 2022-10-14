@@ -4,6 +4,7 @@
 :root {
 	--main-theme-color: cyan;
 	--secondary-theme-color: #2c4755;
+	--section-padding: 60px 0;
 	--p-font-size: 18px;
 	--p-line-height: 1.5;
 	--p-font-color: #777;
@@ -396,4 +397,52 @@ body {
 	.portfolio .portfolio-content .card {
 		text-align: center;
 	}
+}
+
+/*****************/
+/***** about *****/
+/*****************/
+
+.about {
+	padding: var(--section-padding);
+}
+
+.about .about-content {
+	margin-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about .about-content .image {
+	position: relative;
+	width: 250px;
+	height: 375px;
+}
+
+.about .about-content .image img {
+	max-width: 100%;
+}
+
+.about .about-content .image::before {
+	content: "";
+	background-color: #ccc;
+	width: 100px;
+	height: calc(100% + 80px);
+	position: absolute;
+	top: -40px;
+	left: -20px;
+	z-index: -1;
+}
+
+.about .about-content .image::after {
+	content: "";
+	width: 120px;
+	height: calc(100% - 80px);
+	position: absolute;
+	border-left: 80px solid var(--main-theme-color);
+	border-bottom: 80px solid var(--main-theme-color);
+	top: -40px;
+	right: -150px;
+	z-index: -1;
 }
