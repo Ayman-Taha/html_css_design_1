@@ -414,16 +414,19 @@ body {
 	justify-content: space-between;
 }
 
+/* about image div */
 .about .about-content .image {
 	position: relative;
 	width: 250px;
 	height: 375px;
 }
 
+/* about image */
 .about .about-content .image img {
 	max-width: 100%;
 }
 
+/* image before/after shapes */
 .about .about-content .image::before {
 	content: "";
 	background-color: #ccc;
@@ -447,6 +450,7 @@ body {
 	z-index: -1;
 }
 
+/* text part of the about */
 .about .about-content .about-info {
 	flex-basis: calc(100% - 450px);
 }
@@ -487,5 +491,52 @@ body {
 
 	.about .about-content .image {
 		margin: 0 auto 60px;
+	}
+}
+
+/*******************/
+/***** contact *****/
+/*******************/
+
+.contact {
+	padding: var(--section-padding);
+	background-color: var(--background-color);
+}
+
+.contact .contact-content {
+	padding: var(--section-padding);
+	text-align: center;
+}
+
+.contact .contact-content .label {
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--secondary-theme-color);
+	margin-bottom: 20px;
+}
+
+.contact .contact-content .link {
+	display: block;
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--main-theme-color);
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+.contact .contact-content .social-media {
+	display: flex;
+	justify-content: center;
+}
+
+.contact .contact-content .social-media i {
+	margin-left: 10px;
+	color: var(--secondary-theme-color);
+}
+
+@media (max-width: 767px) {
+	.contact .contact-content .label,
+	.contact .contact-content .link {
+		font-size: 25px;
 	}
 }
